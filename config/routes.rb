@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :peeps
   get 'welcome/index'
   get '/users', to: 'users#index'
   get '/home/about'

@@ -10,10 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_21_194918) do
+ActiveRecord::Schema.define(version: 2021_03_22_174335) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "peeps", force: :cascade do |t|
+    t.string "first_name", null: false
+    t.string "last_name"
+    t.string "email", null: false
+    t.string "phone"
+    t.string "twitter"
+    t.string "instagram"
+    t.string "facebook"
+    t.string "snapchat"
+    t.string "soundcloud"
+    t.string "tiktok"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.text "username"

@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<table class="table table-border border-secondary table-striped table-active">
+  <thead class="table-dark">
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Twitter</th>
+      <th>Instagram</th>
+      <th>Facebook</th>
+      <th>Snapchat</th>
+      <th>Soundcloud</th>
+      <th>Tiktok</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @peeps.each do |peep| %>
+      <tr>
+        <td><%= peep.first_name %></td>
+        <td><%= peep.last_name %></td>
+        <td><%= peep.email %></td>
+        <td><%= peep.phone %></td>
+        <td><%= peep.twitter %></td>
+        <td><%= peep.instagram %></td>
+        <td><%= peep.facebook %></td>
+        <td><%= peep.snapchat %></td>
+        <td><%= peep.soundcloud %></td>
+        <td><%= peep.tiktok %></td>
+        <td><%= link_to 'Show', peep %></td>
+        <td><%= link_to 'Edit', edit_peep_path(peep) %></td>
+        <td><%= link_to 'Destroy', peep, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Peep', new_peep_path, class:'btn btn-dark' %>

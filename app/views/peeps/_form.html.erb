@@ -1,0 +1,67 @@
+<%= form_with(model: peep, local: true) do |form| %>
+  <% if peep.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(peep.errors.count, "error") %> prohibited this peep from being saved:</h2>
+
+      <ul>
+      <% peep.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :twitter %>
+    <%= form.text_field :twitter %>
+  </div>
+
+  <div class="field">
+    <%= form.label :instagram %>
+    <%= form.text_field :instagram %>
+  </div>
+
+  <div class="field">
+    <%= form.label :facebook %>
+    <%= form.text_field :facebook %>
+  </div>
+
+  <div class="field">
+    <%= form.label :snapchat %>
+    <%= form.text_field :snapchat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :soundcloud %>
+    <%= form.text_field :soundcloud %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tiktok %>
+    <%= form.text_field :tiktok %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
